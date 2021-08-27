@@ -1,0 +1,1047 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --prim-cl: #f2f8ff;         /* BODY */
+    --seg-cl: #2681ff;          /* MENU */
+    --terc-cl: #2681ff;         /* TITULOS */
+    --quar-cl: #002354;         /* HOVER */
+    --font-cl: black;           /* FONT */
+    --font-menu-cl: white;      /* FONT MENU */
+    --font-menuh-cl: white;     /* FONT MENU HOVER */
+    --font-head-cl: black;      /* FONT HOVER HEADER */
+    --bord-cl: white;           /* BORDA IMG CONTATOS */
+    --scroll-cl: white;         /* SCROLL */
+}
+
+[data-theme="dark"] {
+    --prim-cl: #3e3e3e;
+    --seg-cl: #242424;
+    --terc-cl: #ea8fff;
+    --quar-cl: black;
+    --font-cl: white;
+    --font-menu-cl: white;
+    --font-menuh-cl: #ea8fff;
+    --font-head-cl: #ea8fff;
+    --bord-cl: white;
+    --scroll-cl: #ea8fff;
+}
+
+body {
+    transition: 0.6s;
+    background: var(--prim-cl);
+    color: var(--font-cl);
+    font-family: 'Roboto', sans-serif;
+}   
+
+main {
+    margin: 0 auto;
+}
+
+/*  CABEÇALHO  */
+
+header {
+    transition: 0.6s;
+    width: 100%;  
+    background: var(--seg-cl);
+}
+
+header article {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header article p {
+    padding-left: 40px;
+    color: var(--font-menu-cl);
+}
+
+header article p:hover {
+    color: var(--font-head-cl);
+}
+
+header ul {
+    display: flex;
+}
+
+header ul dt {
+    margin-top: 6px; 
+}
+
+header ul dt:last-child {
+    padding: 0px 40px 0 0;
+}
+
+header ul dt img {
+    width:35px;
+    margin: 0 15px 0 0;
+    border-bottom: 3px solid var(--seg-cl);
+    transition: 0.6s;
+}
+
+header ul dt img:hover {
+    border-bottom: 3px var(--bord-cl) solid;
+}
+
+/* NAV */
+
+.menu {
+    transition: 0.6s;
+    width: 100%;
+    height: 160px; 
+    background: var(--prim-cl);  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu img {
+    width: 160px;
+    margin-left: 60px;
+}
+
+.menu ul {
+    margin-right: 100px;
+    display: flex;
+}
+
+.menu ul dt {
+    background: var(--seg-cl);
+    padding: 25px 20px;
+    margin-right: 15px;
+    border-radius: 3px;
+    border-bottom: 2px var(--seg-cl) solid;
+    transition: 0.6s;
+}
+
+.menu ul dt:hover {
+    background: var(--quar-cl);
+    border-bottom: 2px var(--terc-cl) solid;
+}
+
+.menu ul dt a {
+    padding: 20px;
+    text-decoration: none;
+    color: var(--font-menu-cl);
+    transition: 0.6s;
+}
+
+.menu ul dt a:hover {
+   color: var(--font-menuh-cl);
+}
+
+.menu ul li {
+    background: var(--seg-cl);
+    padding: 25px 20px;
+    margin-right: 15px;
+    border-radius: 3px;
+    border-bottom: 2px var(--seg-cl) solid;
+    transition: 0.6s;
+    list-style-type: none;
+}
+
+.menu ul li:hover {
+    background: var(--quar-cl);
+    border-bottom: 2px var(--terc-cl) solid;
+}
+
+.menu ul li a{
+    padding: 20px;
+    text-decoration: none;
+    color: var(--font-menu-cl);
+    transition: 0.6s;
+}
+
+.menu ul li a:hover {
+    color: var(--font-menuh-cl);
+}
+
+/* BOTAO TEMA ESCURO */
+.theme-switch-wrapper {
+    display: flex;
+    position: absolute;
+    right: 3px;
+    margin-right: 36px;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 55px;
+}
+
+.theme-switch input {
+    display:none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: #fff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(21px);
+    background-color: #ccc;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* BANNER */
+
+.banner figure {
+    width: 100%;
+    height: auto;
+}
+
+.banner img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* PARAGRAFO 1 */
+
+.parag1 {
+    align-items: center;
+}
+
+.parag1 h1 {
+    transition: 0.6s;
+    text-align: center;
+    margin: 60px 0 20px 0;
+    font-size: 30pt;
+    color: var(--terc-cl);
+}
+
+.parag1 p {
+    width: 40%;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+/* SERVICOS */ 
+ 
+.servicos {
+    display: flex;
+}
+
+.servicos article {
+    width: 230px;
+    margin: 0 auto;
+}
+
+.servicos article img {
+    width: 230px;
+    margin: 0 auto;
+    transition: 1s;
+}
+
+.servicos article h2 {
+    transition: 0.6s;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: var(--terc-cl);
+}
+
+.servicos p{
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* PARALLAX */
+
+.parallax {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 100%;
+    height: 300px;
+    background-image: url(../img/parallax.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+/* DESTAQUE */
+
+.imgdest {
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;   
+}
+
+.destaques img {
+    width: 200px;
+    margin: 0 20px;
+    border: 2px solid var(--quar-cl);
+    transition: 0.6s;
+}
+
+.destaques img:hover {
+    border: 2px solid var(--terc-cl);
+}
+
+.paragdest {
+    margin-top: 60px;
+}
+
+.paragdest p {
+    width: 30%;
+    margin: 0 auto;
+}
+
+/* VIDEO */
+
+.video {
+    margin: 60px 0 40px 0;
+}
+
+.video iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+.depo {
+    margin: 0 auto;
+    width: 30%;
+}
+
+.depo p {
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* APLICATIVO */
+
+.app h2 {
+    text-align: center;
+    margin: 40px;
+    color: var(--terc-cl);
+}
+
+.app a {
+    margin: 0 auto;
+}
+
+.app article {
+    width: 230px;
+    margin: 0 auto;
+}
+
+.app article p {
+    width: 230px;
+	height: 230px;
+    background-image: url(../img/android1.png);
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+	display: block;
+    text-indent:-9999px;
+    margin: 0 auto;
+    transition: 0.1s;
+}
+
+.app article p:hover {
+    background-image: url(../img/android2.png);
+    background-size: 230px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* LOGIN */
+
+.login h2 {
+    text-align: center;
+    margin: 40px;
+    color: var(--terc-cl);
+}
+
+.login div {
+    width: 10%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.login div a {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px var(--seg-cl) solid;
+    border-radius: 3px;
+    background: var(--seg-cl);
+    color: var(--font-menu-cl);
+    text-decoration: none;
+    transition: 0.6s; 
+}
+
+.login a:hover {
+    background: var(--quar-cl);
+    border-bottom: 2px var(--terc-cl) solid;
+    color: var(--font-menuh-cl);
+}
+
+/* MAPS */
+
+.maps {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 400px;  
+}
+
+.maps iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+/* FOOTER */       
+
+.rodape {
+    background: var(--seg-cl);
+    margin-top: 60px;
+}
+
+.footer{
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+}
+
+.icone img {
+    width: 200px;
+    margin-left: 60px;
+}
+
+.contato {
+    width: 280px;
+    margin: 0px 0 0 60px;  
+}
+
+.contato p {
+    color: var(--font-menu-cl);
+}
+
+.contato p:nth-child(2) {
+    margin: 10px 0;
+}
+
+.contato p:hover {
+    color: var(--font-head-cl);
+}
+
+.contato ul {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 0 0;
+}
+
+.contato ul dt:nth-child(2) {
+    margin: 0 20px 0 20px;
+}
+
+.contato ul dt:nth-child(3) {
+    margin: 0 20px 0 0; 
+}
+
+.contato img {
+    width: 50px;
+    border-bottom: 3px var(--seg-cl) solid;
+    transition: 0.6s;
+}
+
+.contato img:hover {
+    border-bottom: 3px var(--bord-cl) solid;
+}
+
+.menufooter {
+    margin-left: 5%;
+}
+
+.menufooter ul {
+    display: flex;
+}
+
+.menufooter ul dt {
+    background: var(--prim-cl);
+    padding: 25px 20px;
+    margin-right: 15px;
+    border-radius: 3px;
+    border-bottom: 2px var(--prim-cl) solid;
+    transition: 0.6s;
+}
+
+.menufooter ul dt:hover {
+    background: var(--quar-cl);
+    border-bottom: 2px var(--font-menuh-cl) solid;
+}
+
+.menufooter ul dt a {
+    padding: 20px;
+    text-decoration: none;
+    color: var(--font-cl);
+    transition: 0.6s;
+}
+
+.menufooter ul dt a:hover {
+    color: var(--font-menuh-cl);
+}
+
+.menufooter ul li {
+    background: var(--prim-cl);
+    padding: 25px 20px;
+    margin-right: 15px;
+    border-radius: 3px;
+    border-bottom: 2px var(--prim-cl) solid;
+    transition: 0.6s;
+    list-style-type: none;
+}
+
+.menufooter ul li:hover {
+    background: var(--quar-cl);
+    border-bottom: 2px var(--font-menuh-cl) solid;
+}
+
+.menufooter ul li a{
+    padding: 20px;
+    text-decoration: none;
+    color: var(--font-cl);
+    transition: 0.6s;
+}
+
+.menufooter ul li a:hover {
+    color: var(--font-menuh-cl);
+}
+
+.direitos {
+    width: 100%;
+    background: var(--quar-cl);
+}   
+
+.direitos p {
+    color: var(--font-menu-cl);
+    display: block;
+    text-align: center;
+    padding: 15px;
+}
+
+/* BOTAO RETORNA */
+
+a[href="#top"] img {
+    width: 45px;
+    opacity: 100%;
+    transition: 2s;
+}
+
+a[href="#top"] img:hover {
+    opacity: 70%;
+}
+
+a[href="#top"]{
+    position:fixed;
+    top: 92%;
+    right:36px;
+    display:none;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--seg-cl);
+    box-shadow: inset 0 0 5px grey;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scroll-cl);
+    border-radius: 50px;
+}
+
+/* RESPONSIVO */
+/* Tablet em paisagem */
+
+@media(max-width:1280px){
+    
+/* NAV */
+
+    .menu {
+        height: 200px;
+    }
+
+    .menu img{
+        width: 160px;
+        margin-left: 30px;
+    }
+
+    .menu ul dt {
+        padding: 25px 0;
+    }  
+
+/* BOTAO TEMA ESCURO */
+    
+    .theme-switch-wrapper {
+        right: 0px;
+    }
+
+    .theme-switch {
+        height: 30px;
+        width: 51px;
+    }
+
+    .slider:before {
+        height: 22px;
+        width: 22px;
+    }    
+    
+/* BANNER */    
+    
+    .banner img{
+        width: 100%;
+        height: auto;
+    }
+
+/* PARAGRAFO 1 */
+
+    .parag1 p {
+        width: 60%;
+        text-align: left;
+    }    
+
+/* SERVICOS */ 
+
+    .servicos {
+        display: inline;
+    }
+    
+    .servicos article {
+        width: 60%;
+    }
+    
+    .servicos article img {
+        width: 160px;
+        display: flex;
+    }
+
+    .servicos p{
+        margin: 0 auto;
+        width: 100%;
+    }
+
+/* PARALLAX */    
+    
+    .parallax {
+        height: 250px;
+    }
+    
+/* DESTAQUE */
+
+    .destaques img {
+        width: 225px;
+    }
+
+    .paragdest p {
+        width: 40%;
+    }
+
+/* DEPOIMENTO */
+
+    .depo {
+        width: 80%;
+    }
+
+    .depo p {
+        text-align: left;
+    }       
+    
+/* FOOTER */
+    
+    .menufooter {
+       //display: none;
+    }
+    
+}
+
+/* Smartphones em retrato */
+@media only screen and (max-width: 768px) {
+    
+    body {
+        font-size: 12pt;
+    }
+
+/*  CABEÇALHO  */
+    
+    header article p {
+        padding-left: 10px;
+        font-size: 10pt;
+    }
+
+    header ul dt:last-child {
+        padding: 0px 0px 0 0;
+    }
+
+    header ul dt img {
+        width:35px;
+    }
+    
+/* NAV */
+    
+    .menu {
+        height: 160px;
+    }
+
+    .menu a {
+        margin: 0 auto
+    }    
+
+    .menu img{
+        width: 150px;
+        display: block;
+        margin: 0;
+    }
+
+    .menu ul {
+        display: none;
+    }
+    
+/* BOTAO TEMA ESCURO */
+    
+    .theme-switch-wrapper {
+        top: 20%;
+    }
+    
+/* PARAGRAFO 1 */
+    
+    .parag1 h1 {
+        margin: 30px 0 20px 0;
+        font-size: 20pt;
+    }
+
+    .parag1 p {
+        width: 80%;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    
+/* SERVICOS */
+    
+    .servicos {
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .servicos article {
+        margin: 40px 0px 0px 0%;
+        width: 80%;
+    } 
+    
+    .servicos article:nth-child(5) {
+        margin: 40px 0px 0 0%;
+    }
+    
+    .servicos article img {
+        width: 220px;
+        margin: 0 auto;
+        display: flex;
+}
+
+    .servicos h2 {
+        font-size: 16pt;
+    }
+
+    .servicos p {
+        width: 100%;
+        text-align: left;
+    }
+
+/* PARALLAX */
+    
+    .parallax {
+        display: none;
+    }
+    
+/* DESTAQUE */
+    
+    .destaques img {
+        display: block;
+        width: 160px;
+        height: 160px;
+        margin: 60px 10px 20px 10px;
+    }
+    
+    .paragdest {
+        margin: 0 auto;
+        margin-top: 0px;
+    }
+
+    .paragdest p {
+        width: 80%;
+    }
+    
+/* VIDEO */
+    
+    .video {
+        margin: 60px 0 40px 0;
+    }
+
+    .video iframe {
+        width: 350px;
+        height: 200px;
+    }
+    
+/* APLICATIVO */
+    
+    .app h2 {
+        font-size: 16pt;
+        margin: 20px 0 10px 0;
+    }
+
+    .app article p {
+        background-size: 100px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .app article p:hover {
+        background-image: url(../img/android1.png);
+        background-size: 110px;
+    }
+    
+/* LOGIN */
+
+    .login h2 {
+        font-size: 16pt;
+        margin: 40px 0 20px 0;
+    }
+
+    .login div {
+        width: 23%;
+        margin-top: 20px;
+    }
+
+    .login div a {
+        padding: 15px; 
+    }    
+
+/* MAPS */
+    
+    .maps {
+        width: 100%;  
+    }
+
+    .maps iframe {
+        width: 100%;
+        height: 250px;
+    }
+    
+/* FOOTER */   
+    
+    .rodape {
+        margin-top: 60px;
+    }
+
+    .icone img {
+        width: 120px;
+        margin-left: 20px;  
+    }
+
+    .contato {
+        width: 180px;
+        margin-left: 20px;  
+    }
+
+    .contato p {
+        font-size: 10pt;
+    }
+    
+    .contato p:nth-child(2) {
+        margin: 10px 0;
+    }
+
+    .contato ul {
+        width: 200px;
+    }
+    
+    .contato ul {
+        display: flex;
+        justify-content: flex-start;
+        margin: 30px 0 0 0;
+    }
+    
+    .contato ul dt:nth-child(2) {
+        margin: 0 10px 0 10px;
+    }
+
+    .contato ul dt:nth-child(3) {
+        margin: 0 10px 0 0; 
+    }
+
+    .contato img {
+        width: 35px;
+    }
+
+    .direitos p {
+        font-size: 10pt;
+    }   
+    
+    .menufooter {
+        display: none;
+    }
+    
+/* BOTAO RETORNA */
+
+    a[href="#top"] img {
+        width: 45px;
+        opacity: 100%;
+        transition: 2s;
+    }
+
+    a[href="#top"]{
+        top: 80%;
+        right:10px;
+    }
+    
+}
+
+/* Smartphones em retrato */
+@media(max-width:450px) {
+    
+/* BOTAO TEMA ESCURO */
+    
+    .theme-switch-wrapper {
+        top: 16%;
+        margin-right: 10px;
+    }
+    
+/* PARAGRAFO 1 */    
+    .parag1 h1 {
+        margin: 10px 0 20px 0;
+        font-size: 20pt;
+    }
+    
+    .parag1 p {
+        margin-bottom: 0;
+    }
+    
+/* SERVICOS */
+    
+    .servicos article {
+        width: 80%;
+    }
+    
+    .servicos article img {
+        width: 180px;
+        display: flex;
+    }
+
+    .servicos article:nth-child(5) p {
+        margin-bottom: 40px;
+    }
+    
+/* DESTAQUE */
+    
+    .destaques {
+        border-top: 1px solid var(--terc-cl); 
+        border-bottom: 1px solid var(--terc-cl); 
+    }
+    
+    .destaques p {
+        margin-bottom: 40px;
+    }
+    
+    .imgdest {        
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .imgdest img {
+        margin: 20px 0 0 0;
+        width: 140px;
+        height: auto;
+}
+    
+/* VIDEO */
+    
+    .video {
+        margin: 40px 0 40px 0;
+    }
+
+    .video iframe {
+        width: 100%;
+        height: 200px;
+    }
+    
+/* FOOTER */   
+
+    .icone img {
+        margin-left: 5px;  
+    }
+
+    .contato {
+        width: 160px;
+    }
+
+    .contato ul {
+        width: 170px;
+    }
+    
+    .menufooter {
+        display: none;
+    }
+    
+/* BOTAO RETORNA */
+
+    a[href="#top"]{
+        top: 88%;
+        right: 10px;
+        opacity: 80%;
+    }
+
+}

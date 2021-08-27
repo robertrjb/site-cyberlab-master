@@ -1,0 +1,172 @@
+﻿/* FORMULARIO */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+:root {
+   --prim-cl: #f2f8ff;              /* BODY */
+   --seg-cl: #2681ff;               /* MENU */
+   --terc-cl: #2681ff;              /* TITULOS */
+   --quar-cl: #002354;              /* HOVER */
+   --font-cl: black;                /* FONT */
+   --font-menu-cl: white;           /* FONT MENU */
+   --font-menuh-cl: white;          /* FONT MENU HOVER */
+   --font-head-cl: black;           /* FONT HOVER HEADER */
+   --bord-cl: white;                /* BORDA IMG CONTATOS */
+   --scroll-cl: white;              /* SCROLL */
+   --p-cl: rgba(0, 35, 84, 0.9);    /* BACKGROUND REPOSTA FORM */
+}
+
+[data-theme="dark"] {
+   --prim-cl: #3e3e3e;
+   --seg-cl: #242424;
+   --terc-cl: #ea8fff;
+   --quar-cl: black;
+   --font-menu-cl: white;
+   --font-menuh-cl: #ea8fff;
+   --font-head-cl: #ea8fff;
+   --font-cl: white;
+   --bord-cl: white;
+   --scroll-cl: #ea8fff;
+   --p-cl: rgba(0, 0, 0, 0.9);
+}
+
+body {
+   background: var(--prim-cl);
+   font-family: 'Roboto', sans-serif;
+   color: white;
+   font-size: 12pt;
+}
+
+section {
+   width: 280px;
+   text-align: center;
+   color: var(--terc-cl);
+   margin: 0 auto;
+   margin-top: 144px;
+}
+
+/* FORMULARIO */
+.artform {
+   padding: 10px;
+   border: 2px solid var(--seg-cl);
+   border-style: dashed;
+}
+
+.form input {
+   margin-top: 15px;
+   font-family: 'Roboto', sans-serif;
+   font-size: 12pt;
+}
+
+.form input[type=text] {
+   margin-left: 27px;
+   width: 70%;
+}
+
+.form input[type=password] {
+   margin-left: 21px;
+   width: 70%;
+}
+
+.botton {
+   border-style: hidden;
+   background: var(--seg-cl);
+   color: var(--font-menu-cl);
+   padding: 5px 10px;
+   border-bottom: 2px var(--seg-cl) solid;
+   border-radius: 3px;
+   transition: 0.6s; 
+}
+
+.botton:hover {
+   background: var(--quar-cl);
+   border-bottom: 2px var(--terc-cl) solid;
+   color: var(--font-menuh-cl);
+}
+
+/* BOTAO DO APP */
+
+.botao p {
+   text-align: center;
+   margin: 10px;
+   color: var(--terc-cl);
+}
+
+.botao div {
+   width: 120px;
+   margin: 0 auto;
+}
+
+.botao div a {
+   display: block;
+   text-align: center;
+   padding: 5px 10px;
+   border-bottom: 2px var(--seg-cl) solid;
+   border-radius: 3px;
+   background: var(--seg-cl);
+   color: var(--font-menu-cl);
+   text-decoration: none;
+   transition: 0.6s; 
+}
+
+.botao a:hover {
+   background: var(--quar-cl);
+   border-bottom: 2px var(--terc-cl) solid;
+   color: var(--font-menuh-cl);
+}
+
+/* RESPONSIVO */
+/* Smartphones em retrato */
+@media only screen and (max-width: 768px) {
+   section {
+      width: 290px;
+      margin-top: 56px;
+   } 
+}
+
+/* Smartphones em retrato */
+@media(max-width:450px) {
+   body {
+      font-size: 11pt;
+   }
+
+   section {
+      margin-top: 5px;
+   }
+
+   article legend {
+      display: none;
+   } 
+   
+   /* FORMULARIO */
+   .form input {
+      font-size: 11pt;
+   }
+
+   .form input[type=text] {
+      width: 60%;
+   }
+
+   .form input[type=password] {
+      width: 60%;
+      margin-left: 22px;
+   }
+    
+   /* BOTAO DO APP */
+   .botao {
+      display: flex;
+   }
+   
+   .botao p {
+      font-size: 11pt;
+   }
+    
+   .botao div {
+      font-size: 11pt;
+      margin-top: 10px;
+   }    
+}

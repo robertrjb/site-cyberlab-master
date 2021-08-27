@@ -1,0 +1,136 @@
+/* AGENDAMENTOS */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+:root {
+   --prim-cl: #f2f8ff;              /* BODY */
+   --seg-cl: #2681ff;               /* MENU */
+   --terc-cl: #2681ff;              /* TITULOS */
+   --quar-cl: #002354;              /* HOVER */
+   --font-cl: black;                /* FONT */
+   --font-menu-cl: white;           /* FONT MENU */
+   --font-menuh-cl: white;          /* FONT MENU HOVER */
+   --font-head-cl: black;           /* FONT HOVER HEADER */
+   --bord-cl: white;                /* BORDA IMG CONTATOS */
+   --scroll-cl: white;              /* SCROLL */
+   --p-cl: rgba(0, 35, 84, 0.9);    /* BACKGROUND REPOSTA FORM */
+}
+
+[data-theme="dark"] {
+   --prim-cl: #3e3e3e;
+   --seg-cl: #242424;
+   --terc-cl: #ea8fff;
+   --quar-cl: black;
+   --font-menu-cl: white;
+   --font-menuh-cl: #ea8fff;
+   --font-head-cl: #ea8fff;
+   --font-cl: white;
+   --bord-cl: white;
+   --scroll-cl: #ea8fff;
+   --p-cl: rgba(0, 0, 0, 0.9);
+}
+
+body {
+   background: var(--prim-cl);
+   font-family: 'Roboto', sans-serif;
+   color: var(--font-cl);
+   font-size: 12pt;
+}
+
+/* TABELA */
+.sectable {
+    width: 348px;     
+    margin: 0 auto;
+    margin-top: 155px;
+}
+
+table {
+    width: 348px;
+}
+
+caption {
+    border: 1px solid var(--terc-cl);
+    padding: 10px;
+}
+
+table, th, td {
+    border: 1px solid var(--terc-cl);
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    color: var(--terc-cl);
+}
+
+/* BOTAO SAIR */
+.botao {
+    margin-top: 10px;
+}
+
+.botao div {
+    width: 70px;
+    margin: 0 auto;
+}
+
+.botao div a {
+    display: block;
+    text-align: center;
+    padding: 5px 10px;
+    border-bottom: 2px var(--seg-cl) solid;
+    border-radius: 3px;
+    background: var(--seg-cl);
+    color: var(--font-menu-cl);
+    text-decoration: none;
+    transition: 0.6s; 
+}
+
+.botao a:hover {
+    background: var(--quar-cl);
+    border-bottom: 2px var(--terc-cl) solid;
+    color: var(--font-menuh-cl);
+}
+
+p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* RESPONSIVO */
+/* Smartphones em retrato */
+@media only screen and (max-width: 768px) {
+   
+/* TABELA */   
+   .sectable {
+       margin-top: 68px;
+   }
+}
+
+/* Smartphones em retrato */
+@media(max-width:450px) {
+   
+/* TABELA */   
+   .sectable {
+       margin-top: 6.5px;
+   }
+   
+   caption {
+       padding: 5px;
+   }
+   
+   th, td {
+       padding: 5px;
+   }
+   
+   .botao div a {
+       padding: 4px 10px;
+   }
+}
